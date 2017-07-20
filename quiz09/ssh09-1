@@ -1,0 +1,19 @@
+from math import sqrt
+
+nums =[]
+for a in range (1,1000):
+    for b in range (a+1, 1000):
+        x= sqrt(a*a+b*b)
+        if(x== int(x)) :
+            nums.append([a,b,int(x)])
+
+#print(nums)
+#print(len(nums))
+
+for i in range (len(nums)) :
+    sum=0
+    for j in range (3) :
+        sum+= int(nums[i][j])
+    if sum==1000 :
+        product =nums[i][0]*nums[i][1]*nums[i][2]
+        print(product)
