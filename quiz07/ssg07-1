@@ -1,0 +1,32 @@
+#에라고스테네스의 체 feat 실행안됨
+number1 = 200000
+
+primes = []
+candidates = []
+
+for i in range(3, number1 + 1):
+    candidates.append(i)
+
+# candidates = range (3,number1)
+base = 2
+product = base
+
+while candidates:
+    while product < number1:
+        if product in candidates:
+            candidates.remove(product)
+        product = product + base
+    primes.append(base)
+    base = candidates[0]
+    product = base
+    del candidates[0]
+primes.append(base)
+print(primes)
+print(len(primes))
+print(primes[10001])
+
+sum2 = 0
+for i in range(len(prime)):
+    sum2 = primes[i]
+
+print(sum2)
