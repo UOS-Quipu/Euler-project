@@ -1,0 +1,12 @@
+jegop_sum =0
+sum_jegop =0
+sum1 =0
+
+for i in range (101) :
+    jegop_sum += i*i
+    sum1 += i
+    
+sum_jegop = sum1*sum1
+
+print (sum1)
+print (sum_jegop- jegop_sum)
